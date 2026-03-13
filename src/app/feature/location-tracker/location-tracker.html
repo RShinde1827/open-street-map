@@ -1,0 +1,64 @@
+<div class="tracker-container">
+  <h2>Suspect Location Tracker</h2>
+
+  <div class="filters">
+    <input
+      type="text"
+      [(ngModel)]="searchLocation"
+      placeholder="Enter location (Andheri / Thane)"
+    />
+    <input type="date" [(ngModel)]="searchDate" />
+    <input type="time" [(ngModel)]="searchTime" />
+    <input type="number" [(ngModel)]="radius" placeholder="Radius (KM)" min="1" />
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div class="map-wrapper">
+    <div id="map" class="map-view"></div>
+
+    <div id="popup" class="ol-popup">
+      
+        <div class="suspect-popup-card">
+          
+          <div class="popup-header">
+            <div class="popup-name">{{ selectedSuspectForPopup?.personalInfo?.fullName }}</div>
+            <div class="popup-sub">
+              <span>{{ selectedSuspectForPopup?.suspectId }}</span>
+              <span class="risk-pill" [ngClass]="selectedSuspectForPopup?.riskLevel?.toLowerCase()">
+                {{ selectedSuspectForPopup?.riskLevel }} RISK
+              </span>
+            </div>
+          </div>
+
+          <div class="popup-body">
+            <button
+              class="btn primary"
+              (click)="openSuspectDetails(selectedSuspectForPopup?.suspectId)"
+            >
+              👤 View Personal Details
+            </button>
+            <button class="btn outline" (click)="openCallLogs(selectedSuspectForPopup?.suspectId)">
+              📞 View Call Logs
+            </button>
+          </div>
+        
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+@if (showDetailsModal) {
+  <app-view-suspect-details
+    [suspect]="selectedSuspect"
+    (close)="closePopup()"
+  ></app-view-suspect-details>
+}
+
+@if (showCallLogsModal) {
+  <app-view-call-logs
+    [callLogs]="suspectCallLog"
+    [suspects]="selectedSuspect"
+    (close)="closePopup()"
+  ></app-view-call-logs>
+}

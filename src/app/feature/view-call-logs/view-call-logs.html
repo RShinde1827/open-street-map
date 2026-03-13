@@ -1,0 +1,39 @@
+<div class="modal-overlay">
+  <div class="modal-box">
+
+    <h2 class="title">
+      Call Logs for "{{ suspects?.personalInfo?.fullName }}"
+    </h2>
+
+    <table class="call-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Direction</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Contact</th>
+          <th>Duration</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let call of callLogs?.callLogs">
+          <td>{{ formatDate(call.timestamp) }}</td>
+          <td>{{ formatTime(call.timestamp) }}</td>
+          <td>{{ call.direction }}</td>
+          <td>{{ call.fromNumber }}</td>
+          <td>{{ call.toNumber }}</td>
+          <td>{{ call.contactName }}</td>
+          <td>{{ formatDuration(call.durationSeconds) }}</td>
+          <td>{{ call.callType }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="close-btn" (click)="closePopup()">Close</button>
+
+  </div>
+</div>

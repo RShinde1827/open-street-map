@@ -1,0 +1,60 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.call-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.call-table th {
+  background: #1f7aa8;
+  color: white;
+  padding: 8px;
+}
+
+.call-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.call-table tr:hover {
+  background: #f5f5f5;
+}
+
+.close-btn {
+  margin-top: 15px;
+  background: #1f7aa8;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}

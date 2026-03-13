@@ -1,0 +1,60 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.details {
+  display: grid;
+  row-gap: 8px;
+  margin-top: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 180px 10px auto;
+  align-items: start;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.colon {
+  text-align: center;
+  font-weight: 600;
+}
+
+.view-btn {
+  background: #1f7aa8;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+  background: #145a7d;
+}

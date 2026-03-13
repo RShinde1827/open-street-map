@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+  padding: 0 20px;
+
+  border-radius: 10px;
+
+  background-color: #1976d2;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 35px;
+  cursor: pointer;
+}
+
+.user-logo {
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  cursor: pointer;
+  font-size: 28px;
+}

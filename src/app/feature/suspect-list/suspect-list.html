@@ -1,0 +1,63 @@
+<div class="suspect-table-container">
+  <div class="table-wrapper">
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search suspect by name..."
+        (input)="onSearch($event)"
+        class="search-input"
+      />
+    </div>
+
+    @if (filteredSuspects$ | async; as suspects) {
+      <table class="suspect-table">
+        <thead>
+          <tr>
+            <th>Suspect Id</th>
+            <th>Full Name</th>
+            <th>Aliases</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Nationality</th>
+            <th>Marital Status</th>
+            <th>Blood Group</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (suspect of suspects; track suspect.suspectId) {
+            <tr>
+              <td>{{ suspect.suspectId }}</td>
+              <td>{{ suspect.personalInfo.fullName }}</td>
+
+              <td>
+                <ul class="alias-list">
+                  @for (alias of suspect.personalInfo.aliases ?? []; track alias) {
+                    <li>{{ alias }}</li>
+                  }
+                </ul>
+              </td>
+
+              <td>{{ suspect.personalInfo.gender }}</td>
+              <td>{{ suspect.personalInfo.dateOfBirth }}</td>
+              <td>{{ suspect.personalInfo.age }}</td>
+              <td>{{ suspect.personalInfo.nationality }}</td>
+              <td>{{ suspect.personalInfo.maritalStatus }}</td>
+              <td>{{ suspect.personalInfo.bloodGroup }}</td>
+
+              <td>
+                <button class="view-btn" (click)="openDetails(suspect)">View Details</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>
+
+@if (selectedSuspect) {
+  <app-view-suspect-details [suspect]="selectedSuspect" (close)="closePopup()"> </app-view-suspect-details>
+}

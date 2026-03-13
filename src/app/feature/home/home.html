@@ -1,0 +1,17 @@
+@if (isLoggedIn$ | async; as isLoggedIn) {
+    <div class="home-container">
+
+  <div class="card">
+    <h3>Suspect Database</h3>
+    <p>Manage and monitor suspect profiles and related records.</p>
+    <button (click)="navigateToSuspectList()">View Details</button>
+  </div>
+
+  <div class="card">
+    <h3>Surveillance Reports</h3>
+    <p>Monitor movements, travel history and field reports.</p>
+    <button (click)="navigateToLocationTracker()">View Details</button>
+  </div>
+
+</div>
+}

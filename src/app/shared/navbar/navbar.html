@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+@if (isLoggedIn$ | async; as isLoggedIn) {
+  <nav class="navbar">
+  <div class="nav-left" (click)="navigateToHome()">
+    <img src='assets/image/logo.png' alt="App Logo" class="logo">
+  </div>
+
+  <div class="nav-right">
+    <span 
+      class="material-icons nav-icon"
+      (click)="logout()">
+      <img src='assets/image/user.png' alt="App Logo" class="user-logo">
+    </span>
+  </div>
+</nav>
+}

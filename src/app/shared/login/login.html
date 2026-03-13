@@ -1,0 +1,18 @@
+@if (isLoggedOut$ | async; as isLoggedOut) {
+  <div class="login-wrapper">
+    <div class="login-card">
+      <h2>Sign in with email</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="input-group">
+          <span class="icon">📧</span>
+          <input type="email" placeholder="Email" formControlName="email" />
+        </div>
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <input type="password" placeholder="Password" formControlName="password" />
+        </div>
+        <button type="submit" class="login-btn">Get Started</button>
+      </form>
+    </div>
+  </div>
+}

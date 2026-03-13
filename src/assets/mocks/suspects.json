@@ -1,0 +1,409 @@
+{
+  "suspects": [
+    {
+      "suspectId": "SUS001",
+      "personalInfo": {
+        "fullName": "Rahul Sharma",
+        "aliases": ["Raju", "RS"],
+        "gender": "Male",
+        "dateOfBirth": "1990-03-15",
+        "age": 35,
+        "nationality": "Indian",
+        "maritalStatus": "Married",
+        "bloodGroup": "B+"
+      },
+      "identification": {
+        "aadhaarNumber": "1234-5678-9012",
+        "passportNumber": "N1234567",
+        "drivingLicense": "MH12-2020-0001234",
+        "voterId": "MH/123/456/789"
+      },
+      "contactDetails": {
+        "phoneNumbers": ["9876543210", "9123456780"],
+        "emails": ["rahul.sharma@example.com"],
+        "currentAddress": "Andheri East, Mumbai",
+        "permanentAddress": "Nagpur, Maharashtra"
+      },
+      "physicalDescription": {
+        "heightCm": 175,
+        "weightKg": 78,
+        "eyeColor": "Brown",
+        "hairColor": "Black",
+        "bodyType": "Athletic",
+        "identifyingMarks": ["Scar on left eyebrow"],
+        "fingerprintsOnRecord": true,
+        "dnaOnRecord": false
+      },
+      "familyDetails": {
+        "fatherName": "Ramesh Sharma",
+        "motherName": "Sarla Sharma",
+        "spouseName": "Priya Sharma",
+        "children": ["Aarav Sharma"]
+      },
+      "occupation": {
+        "jobTitle": "Mechanic",
+        "workplace": "Auto Garage",
+        "company": "Sharma Motors",
+        "monthlyIncome": 35000
+      },
+      "vehicles": [
+        {
+          "type": "Car",
+          "model": "Hyundai i20",
+          "color": "White",
+          "licensePlate": "MH02AB1234"
+        }
+      ],
+      "devices": {
+        "mobileIMEI": ["865432109876543"],
+        "laptopSerial": "LAPTOP123456"
+      },
+      "socialMedia": {
+        "facebook": "facebook.com/rahul.sharma",
+        "instagram": "instagram.com/rahul_rs",
+        "twitter": "twitter.com/rahul_rs"
+      },
+      "criminalHistory": [
+        {
+          "caseId": "CR1001",
+          "crime": "Vehicle Theft",
+          "year": 2018,
+          "status": "Closed"
+        }
+      ],
+      "knownAssociates": ["SUS002", "SUS003"],
+      "habits": {
+        "smoking": true,
+        "alcohol": true,
+        "drugs": false
+      },
+      "riskLevel": "Medium",
+      "lastKnownLocation": "Mumbai Central",
+      "surveillanceNotes": "Frequently visits dockyard area."
+    },
+    {
+      "suspectId": "SUS002",
+      "personalInfo": {
+        "fullName": "Imran Khan",
+        "aliases": ["IK", "Immy"],
+        "gender": "Male",
+        "dateOfBirth": "1985-09-20",
+        "age": 40,
+        "nationality": "Indian",
+        "maritalStatus": "Single",
+        "bloodGroup": "O+"
+      },
+      "identification": {
+        "aadhaarNumber": "2345-6789-0123",
+        "passportNumber": "M9876543",
+        "drivingLicense": "MH14-2019-0005678",
+        "voterId": "MH/321/654/987"
+      },
+      "contactDetails": {
+        "phoneNumbers": ["9988776655"],
+        "emails": ["imran.khan@example.com"],
+        "currentAddress": "Kurla, Mumbai",
+        "permanentAddress": "Lucknow, UP"
+      },
+      "physicalDescription": {
+        "heightCm": 180,
+        "weightKg": 85,
+        "eyeColor": "Black",
+        "hairColor": "Black",
+        "bodyType": "Heavy",
+        "identifyingMarks": ["Tattoo on right arm"],
+        "fingerprintsOnRecord": true,
+        "dnaOnRecord": true
+      },
+      "familyDetails": {
+        "fatherName": "Salim Khan",
+        "motherName": "Nazia Khan",
+        "spouseName": "",
+        "children": []
+      },
+      "occupation": {
+        "jobTitle": "Driver",
+        "workplace": "Private Taxi",
+        "company": "City Cabs",
+        "monthlyIncome": 28000
+      },
+      "vehicles": [
+        {
+          "type": "Taxi",
+          "model": "Toyota Etios",
+          "color": "Yellow",
+          "licensePlate": "MH01CD5678"
+        }
+      ],
+      "devices": {
+        "mobileIMEI": ["975312468012345"],
+        "laptopSerial": "DELL998877"
+      },
+      "socialMedia": {
+        "facebook": "facebook.com/imran.khan",
+        "instagram": "instagram.com/immy_k",
+        "twitter": "twitter.com/imran_k"
+      },
+      "criminalHistory": [
+        {
+          "caseId": "CR1002",
+          "crime": "Smuggling",
+          "year": 2020,
+          "status": "Under Investigation"
+        }
+      ],
+      "knownAssociates": ["SUS001"],
+      "habits": {
+        "smoking": false,
+        "alcohol": true,
+        "drugs": false
+      },
+      "riskLevel": "High",
+      "lastKnownLocation": "Bandra",
+      "surveillanceNotes": "Seen meeting foreign contacts."
+    },
+    {
+      "suspectId": "SUS003",
+      "personalInfo": {
+        "fullName": "Amit Verma",
+        "aliases": ["AV"],
+        "gender": "Male",
+        "dateOfBirth": "1992-11-05",
+        "age": 33,
+        "nationality": "Indian",
+        "maritalStatus": "Single",
+        "bloodGroup": "A+"
+      },
+      "identification": {
+        "aadhaarNumber": "3456-7890-1234",
+        "passportNumber": "P7654321",
+        "drivingLicense": "DL09-2021-0012345",
+        "voterId": "DL/123/987/654"
+      },
+      "contactDetails": {
+        "phoneNumbers": ["9001122334"],
+        "emails": ["amit.verma@example.com"],
+        "currentAddress": "Noida Sector 62",
+        "permanentAddress": "Kanpur, UP"
+      },
+      "physicalDescription": {
+        "heightCm": 170,
+        "weightKg": 70,
+        "eyeColor": "Brown",
+        "hairColor": "Black",
+        "bodyType": "Slim",
+        "identifyingMarks": ["Mole on chin"],
+        "fingerprintsOnRecord": true,
+        "dnaOnRecord": false
+      },
+      "familyDetails": {
+        "fatherName": "Suresh Verma",
+        "motherName": "Anita Verma",
+        "spouseName": "",
+        "children": []
+      },
+      "occupation": {
+        "jobTitle": "Software Engineer",
+        "workplace": "IT Park",
+        "company": "TechNova",
+        "monthlyIncome": 90000
+      },
+      "vehicles": [
+        {
+          "type": "Bike",
+          "model": "Yamaha R15",
+          "color": "Blue",
+          "licensePlate": "DL05EF3456"
+        }
+      ],
+      "devices": {
+        "mobileIMEI": ["861234567890123"],
+        "laptopSerial": "MAC12345678"
+      },
+      "socialMedia": {
+        "facebook": "facebook.com/amit.verma",
+        "instagram": "instagram.com/amitv",
+        "twitter": "twitter.com/amit_v"
+      },
+      "criminalHistory": [
+        {
+          "caseId": "CR1003",
+          "crime": "Cyber Fraud",
+          "year": 2021,
+          "status": "Ongoing"
+        }
+      ],
+      "knownAssociates": ["SUS001"],
+      "habits": {
+        "smoking": false,
+        "alcohol": false,
+        "drugs": false
+      },
+      "riskLevel": "Medium",
+      "lastKnownLocation": "Noida",
+      "surveillanceNotes": "Active on dark web forums."
+    },
+    {
+      "suspectId": "SUS004",
+      "personalInfo": {
+        "fullName": "Sanjay Patil",
+        "aliases": ["SP"],
+        "gender": "Male",
+        "dateOfBirth": "1988-02-18",
+        "age": 37,
+        "nationality": "Indian",
+        "maritalStatus": "Married",
+        "bloodGroup": "AB+"
+      },
+      "identification": {
+        "aadhaarNumber": "4567-8901-2345",
+        "passportNumber": "K5432198",
+        "drivingLicense": "MH20-2017-0009999",
+        "voterId": "MH/222/444/666"
+      },
+      "contactDetails": {
+        "phoneNumbers": ["9898989898"],
+        "emails": ["sanjay.patil@example.com"],
+        "currentAddress": "Nashik",
+        "permanentAddress": "Kolhapur"
+      },
+      "physicalDescription": {
+        "heightCm": 178,
+        "weightKg": 82,
+        "eyeColor": "Brown",
+        "hairColor": "Black",
+        "bodyType": "Muscular",
+        "identifyingMarks": ["Burn mark on right hand"],
+        "fingerprintsOnRecord": true,
+        "dnaOnRecord": true
+      },
+      "familyDetails": {
+        "fatherName": "Ganesh Patil",
+        "motherName": "Sunita Patil",
+        "spouseName": "Meera Patil",
+        "children": ["Riya Patil"]
+      },
+      "occupation": {
+        "jobTitle": "Transport Contractor",
+        "workplace": "Warehouse",
+        "company": "Patil Logistics",
+        "monthlyIncome": 120000
+      },
+      "vehicles": [
+        {
+          "type": "Truck",
+          "model": "Tata 407",
+          "color": "Red",
+          "licensePlate": "MH15GH7890"
+        }
+      ],
+      "devices": {
+        "mobileIMEI": ["867530912345678"],
+        "laptopSerial": "HP556677"
+      },
+      "socialMedia": {
+        "facebook": "facebook.com/sanjay.patil",
+        "instagram": "instagram.com/spatil",
+        "twitter": "twitter.com/patil_sp"
+      },
+      "criminalHistory": [
+        {
+          "caseId": "CR1004",
+          "crime": "Illegal Transport",
+          "year": 2019,
+          "status": "Closed"
+        }
+      ],
+      "knownAssociates": ["SUS002"],
+      "habits": {
+        "smoking": true,
+        "alcohol": true,
+        "drugs": false
+      },
+      "riskLevel": "Low",
+      "lastKnownLocation": "Nashik Highway",
+      "surveillanceNotes": "Transport routes monitored."
+    },
+    {
+      "suspectId": "SUS005",
+      "personalInfo": {
+        "fullName": "Rakesh Gupta",
+        "aliases": ["RG"],
+        "gender": "Male",
+        "dateOfBirth": "1979-07-12",
+        "age": 46,
+        "nationality": "Indian",
+        "maritalStatus": "Married",
+        "bloodGroup": "O-"
+      },
+      "identification": {
+        "aadhaarNumber": "5678-9012-3456",
+        "passportNumber": "T4567890",
+        "drivingLicense": "DL08-2015-0045678",
+        "voterId": "DL/555/666/777"
+      },
+      "contactDetails": {
+        "phoneNumbers": ["9811111111"],
+        "emails": ["rakesh.gupta@example.com"],
+        "currentAddress": "Karol Bagh, Delhi",
+        "permanentAddress": "Delhi"
+      },
+      "physicalDescription": {
+        "heightCm": 168,
+        "weightKg": 75,
+        "eyeColor": "Black",
+        "hairColor": "Grey",
+        "bodyType": "Average",
+        "identifyingMarks": ["Scar on right cheek"],
+        "fingerprintsOnRecord": true,
+        "dnaOnRecord": false
+      },
+      "familyDetails": {
+        "fatherName": "Mahesh Gupta",
+        "motherName": "Kamla Gupta",
+        "spouseName": "Sunita Gupta",
+        "children": ["Neha Gupta", "Rohit Gupta"]
+      },
+      "occupation": {
+        "jobTitle": "Jewelry Shop Owner",
+        "workplace": "Karol Bagh Market",
+        "company": "Gupta Jewelers",
+        "monthlyIncome": 200000
+      },
+      "vehicles": [
+        {
+          "type": "Car",
+          "model": "Honda City",
+          "color": "Black",
+          "licensePlate": "DL03IJ4567"
+        }
+      ],
+      "devices": {
+        "mobileIMEI": ["863214567890123"],
+        "laptopSerial": "LENOVO009988"
+      },
+      "socialMedia": {
+        "facebook": "facebook.com/rakesh.gupta",
+        "instagram": "instagram.com/rakeshg",
+        "twitter": "twitter.com/rakesh_g"
+      },
+      "criminalHistory": [
+        {
+          "caseId": "CR1005",
+          "crime": "Money Laundering",
+          "year": 2017,
+          "status": "Ongoing"
+        }
+      ],
+      "knownAssociates": ["SUS004"],
+      "habits": {
+        "smoking": false,
+        "alcohol": true,
+        "drugs": false
+      },
+      "riskLevel": "High",
+      "lastKnownLocation": "Delhi",
+      "surveillanceNotes": "Financial transactions under monitoring."
+    }
+  ]
+}
