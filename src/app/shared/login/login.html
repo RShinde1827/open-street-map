@@ -2,6 +2,11 @@
   <div class="login-wrapper">
     <div class="login-card">
       <h2>Sign in with email</h2>
+      @if (loginError$ | async; as error) {
+        <div class="error-message">
+          {{ error }}
+        </div>
+      }
       <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="input-group">
           <span class="icon">📧</span>

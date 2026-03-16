@@ -17,13 +17,17 @@ import { provideHttpClient } from '@angular/common/http';
 
 import { reducer } from './core/+state/open-street-map.reducer';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { metaReducers } from './core/+state/meta-reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    importProvidersFrom(StoreModule.forRoot({ openStreetMap: reducer })),
+    importProvidersFrom(StoreModule.forRoot(
+      { openStreetMap: reducer },
+      { metaReducers }
+    )),
     importProvidersFrom(EffectsModule.forRoot([])),
     provideStoreDevtools({
       maxAge: 25,
@@ -31,5 +35,6 @@ export const appConfig: ApplicationConfig = {
     }),
     provideHttpClient(),
     importProvidersFrom(GoogleMapsModule),
+
   ],
 };

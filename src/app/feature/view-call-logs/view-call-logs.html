@@ -1,9 +1,6 @@
 <div class="modal-overlay">
   <div class="modal-box">
-
-    <h2 class="title">
-      Call Logs for "{{ suspects?.personalInfo?.fullName }}"
-    </h2>
+    <h2 class="title">Call Logs for "{{ suspects?.personalInfo?.fullName }}"</h2>
 
     <table class="call-table">
       <thead>
@@ -20,20 +17,21 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let call of callLogs?.callLogs">
-          <td>{{ formatDate(call.timestamp) }}</td>
-          <td>{{ formatTime(call.timestamp) }}</td>
-          <td>{{ call.direction }}</td>
-          <td>{{ call.fromNumber }}</td>
-          <td>{{ call.toNumber }}</td>
-          <td>{{ call.contactName }}</td>
-          <td>{{ formatDuration(call.durationSeconds) }}</td>
-          <td>{{ call.callType }}</td>
-        </tr>
+        @for (call of filteredCallLogs(); track call) {
+          <tr>
+            <td>{{ formatDate(call.timestamp) }}</td>
+            <td>{{ formatTime(call.timestamp) }}</td>
+            <td>{{ call.direction }}</td>
+            <td>{{ call.fromNumber }}</td>
+            <td>{{ call.toNumber }}</td>
+            <td>{{ call.contactName }}</td>
+            <td>{{ formatDuration(call.durationSeconds) }}</td>
+            <td>{{ call.callType }}</td>
+          </tr>
+        }
       </tbody>
     </table>
 
     <button class="close-btn" (click)="closePopup()">Close</button>
-
   </div>
 </div>

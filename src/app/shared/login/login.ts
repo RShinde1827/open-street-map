@@ -21,7 +21,9 @@ export class Login {
 
   errorMessage = '';
 
+  isLoggedIn$ = this.openStreetMapFacade.isAuthenticated$;
   isLoggedOut$ = this.openStreetMapFacade.isLoggedOut$;
+  loginError$ = this.openStreetMapFacade.error$;
 
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],

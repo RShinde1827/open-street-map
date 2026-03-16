@@ -1,7 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { OpenStreetMapState } from "./open-street-map.state";
-import { create } from "domain";
-import e from "express";
 
 export const featureState = createFeatureSelector<OpenStreetMapState>('openStreetMapFeature');
 
@@ -28,4 +26,9 @@ export const selectSuspectLocationDetails = createSelector(
 export const selectSuspectCallLogs = createSelector(
     featureState,
     (state: OpenStreetMapState) => state.suspectCallLogs
+);
+
+export const selectError = createSelector(
+    featureState,
+    (state: OpenStreetMapState) => state.error
 );

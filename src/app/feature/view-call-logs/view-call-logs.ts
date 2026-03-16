@@ -14,6 +14,8 @@ export class ViewCallLogs {
 
   @Input() callLogs?: SuspectCallLogs;
   @Input() suspects?: Suspect;
+  @Input() searchDate?: string;
+  @Input() searchTime?: string;
 
   @Output() close = new EventEmitter<void>();
 
@@ -47,4 +49,17 @@ export class ViewCallLogs {
 
     return `${minutes}m ${remainingSeconds.toString().padStart(2, '0')}s`;
   }
+
+  filteredCallLogs() {
+  if (!this.callLogs?.callLogs) return [];
+
+  if (!this.searchDate || !this.searchTime) return this.callLogs.callLogs;
+
+  const searchTimestamp = new Date(`${this.searchDate}T${this.searchTime}`).getTime();
+
+  return this.callLogs.callLogs.filter((call) => {
+    const callTime = new Date(call.timestamp).getTime();
+    return callTime <= searchTimestamp;
+  });
+}
 }

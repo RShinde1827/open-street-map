@@ -16,7 +16,6 @@ export class AuthService {
     }));
   }
 
-
   isAuthenticated(userData: User, email: string, password: string): boolean {
     const user = userData.users.find(
           (u: UserData) => u.email === email && u.password === password

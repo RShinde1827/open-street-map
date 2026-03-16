@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, AfterViewInit, PLATFORM_ID, NgZone } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, PLATFORM_ID, NgZone, ChangeDetectorRef } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -36,7 +36,8 @@ import { SuspectCallLogs } from '../../core/interface/suspects-call-log.interfac
 export class LocationTracker implements OnInit, AfterViewInit {
   private readonly ngZone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
-  readonly openStreetMapFacade = inject(OpenStreetMapFacade);
+  private readonly openStreetMapFacade = inject(OpenStreetMapFacade);
+  private readonly cdr = inject(ChangeDetectorRef)
 
   map!: Map;
   popup!: Overlay;
@@ -116,12 +117,14 @@ export class LocationTracker implements OnInit, AfterViewInit {
 
           if (found) {
             this.selectedSuspectForPopup = found;
+            this.cdr.markForCheck();
             console.log('Selected Suspect:', this.selectedSuspectForPopup);
             const geometry = feature.getGeometry() as Point;
             this.popup.setPosition(geometry.getCoordinates());
           }
         } else {
           this.selectedSuspectForPopup = null;
+          this.cdr.markForCheck();
           this.popup.setPosition(undefined);
         }
       });

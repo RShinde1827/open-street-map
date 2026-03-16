@@ -8,6 +8,7 @@ export const reducer = createReducer(
   on(GetLoginActions.loginSuccess, (state: OpenStreetMapState, { isAuthenticated }) =>
     produce(state, (draft: OpenStreetMapState) => {
       draft.isAuthenticated = isAuthenticated;
+      draft.error = '';
     }),
   ),
     on(GetLoginActions.loginFailure, (state: OpenStreetMapState, { error }) =>

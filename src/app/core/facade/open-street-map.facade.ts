@@ -1,5 +1,5 @@
 import { inject, Injectable } from "@angular/core";
-import { selectIsAuthenticated, selectLoggedOutUser, selectSuspectCallLogs, selectSuspectList, selectSuspectLocationDetails } from "../+state/open-street-map.selector";
+import { selectError, selectIsAuthenticated, selectLoggedOutUser, selectSuspectCallLogs, selectSuspectList, selectSuspectLocationDetails } from "../+state/open-street-map.selector";
 import { Store } from "@ngrx/store";
 import { Suspect } from "../interface/suspect.interface";
 import { Observable } from "rxjs";
@@ -17,4 +17,5 @@ export class OpenStreetMapFacade {
     suspectLocationDetails$: Observable<SuspectLocation[]> = this.store.select(selectSuspectLocationDetails);
 
     suspectCallLogs$ = this.store.select(selectSuspectCallLogs);
+    error$ = this.store.select(selectError);
 }
